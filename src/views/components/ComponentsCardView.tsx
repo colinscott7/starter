@@ -2,7 +2,7 @@ import * as bs from "reactstrap";
 import * as cpx from "../../components";
 import { Link } from "react-router-dom";
 
-export const PageComponentsButton = () => {
+export const ComponentsCardView = () => {
   return (
     <>
       <cpx.Layout>
@@ -20,11 +20,11 @@ export const PageComponentsButton = () => {
                   <bs.BreadcrumbItem>
                     <Link to="/components">Components</Link>
                   </bs.BreadcrumbItem>
-                  <bs.BreadcrumbItem active>Button</bs.BreadcrumbItem>
+                  <bs.BreadcrumbItem active>Card</bs.BreadcrumbItem>
                 </bs.Breadcrumb>
               </bs.Col>
               <bs.Col>
-                <h1 className="display-2 text-right text-secondary">Button</h1>
+                <h1 className="display-2 text-right text-secondary">Card</h1>
               </bs.Col>
             </bs.Row>
             <bs.Row>

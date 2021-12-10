@@ -3,7 +3,7 @@ import * as cpx from "../../components";
 import { RouteComponentProps } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-export const PageComponents = (props: RouteComponentProps) => {
+export const ComponentsView = (props: RouteComponentProps) => {
   const navigateToPath = (id: string) => (evt: any) => {
     evt.preventDefault();
     evt.stopPropagation();

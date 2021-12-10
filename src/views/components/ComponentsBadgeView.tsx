@@ -2,7 +2,7 @@ import * as bs from "reactstrap";
 import * as cpx from "../../components";
 import { Link } from "react-router-dom";
 
-export const PageComponentsAccordion = () => {
+export const ComponentsBadgeView = () => {
   return (
     <>
       <cpx.Layout>
@@ -20,11 +20,11 @@ export const PageComponentsAccordion = () => {
                   <bs.BreadcrumbItem>
                     <Link to="/components">Components</Link>
                   </bs.BreadcrumbItem>
-                  <bs.BreadcrumbItem active>Accordion</bs.BreadcrumbItem>
+                  <bs.BreadcrumbItem active>Badge</bs.BreadcrumbItem>
                 </bs.Breadcrumb>
               </bs.Col>
               <bs.Col>
-                <h1 className="display-2 text-right text-secondary">Accordion</h1>
+                <h1 className="display-2 text-right text-secondary">Badge</h1>
               </bs.Col>
             </bs.Row>
             <bs.Row>
@@ -45,11 +45,6 @@ export const PageComponentsAccordion = () => {
                       permit. We also make an effort to ensure that all our products are AA
                       compliant by default.
                     </p>
-                    <cpx.Accordion>
-                      <cpx.AccordionItem title="Item one">blah</cpx.AccordionItem>
-                      <cpx.AccordionItem title="Item two">blah</cpx.AccordionItem>
-                      <cpx.AccordionItem title="Item three">blah</cpx.AccordionItem>
-                    </cpx.Accordion>
                   </bs.Col>
                 </bs.Row>
               </bs.Col>

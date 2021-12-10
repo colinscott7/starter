@@ -2,7 +2,7 @@ import * as bs from "reactstrap";
 import * as cpx from "../../components";
 import { Link } from "react-router-dom";
 
-export const PageComponentsVideo = () => {
+export const ComponentsButtonView = () => {
   return (
     <>
       <cpx.Layout>
@@ -20,11 +20,11 @@ export const PageComponentsVideo = () => {
                   <bs.BreadcrumbItem>
                     <Link to="/components">Components</Link>
                   </bs.BreadcrumbItem>
-                  <bs.BreadcrumbItem active>Video</bs.BreadcrumbItem>
+                  <bs.BreadcrumbItem active>Button</bs.BreadcrumbItem>
                 </bs.Breadcrumb>
               </bs.Col>
               <bs.Col>
-                <h1 className="display-2 text-right text-secondary">Video</h1>
+                <h1 className="display-2 text-right text-secondary">Button</h1>
               </bs.Col>
             </bs.Row>
             <bs.Row>
@@ -45,12 +45,6 @@ export const PageComponentsVideo = () => {
                       permit. We also make an effort to ensure that all our products are AA
                       compliant by default.
                     </p>
-                    <cpx.VideoPlayer
-                      src="/videos/demo.mp4"
-                      captions="/videos/captions/en/demo.vtt"
-                      allowFullscreen={true}
-                      color={"light"}
-                    />
                   </bs.Col>
                 </bs.Row>
               </bs.Col>

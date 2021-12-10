@@ -1,8 +1,9 @@
 import * as bs from "reactstrap";
 import * as cpx from "../../components";
+import { RouteComponentProps } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-export const PageComponentsCard = () => {
+export const ComponentsAudioView = (props: RouteComponentProps) => {
   return (
     <>
       <cpx.Layout>
@@ -20,11 +21,11 @@ export const PageComponentsCard = () => {
                   <bs.BreadcrumbItem>
                     <Link to="/components">Components</Link>
                   </bs.BreadcrumbItem>
-                  <bs.BreadcrumbItem active>Card</bs.BreadcrumbItem>
+                  <bs.BreadcrumbItem active>Audio</bs.BreadcrumbItem>
                 </bs.Breadcrumb>
               </bs.Col>
               <bs.Col>
-                <h1 className="display-2 text-right text-secondary">Card</h1>
+                <h1 className="display-2 text-right text-secondary">Audio</h1>
               </bs.Col>
             </bs.Row>
             <bs.Row>
@@ -45,6 +46,11 @@ export const PageComponentsCard = () => {
                       permit. We also make an effort to ensure that all our products are AA
                       compliant by default.
                     </p>
+                    <cpx.AudioPlayer
+                      src="/audio/demo.mp3"
+                      captions="/videos/captions/en/demo.vtt"
+                      color={"light"}
+                    />
                   </bs.Col>
                 </bs.Row>
               </bs.Col>

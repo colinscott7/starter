@@ -1,8 +1,8 @@
 import * as bs from "reactstrap";
-import * as cpx from "../components";
+import * as cpx from "../../components";
 import { Link } from "react-router-dom";
 
-export const DataAbout = () => {
+export const AboutView = () => {
   return (
     <>
       <cpx.Layout>

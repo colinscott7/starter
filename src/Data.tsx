@@ -1,17 +1,17 @@
 import { SvgIcon } from "./components/svg/SvgIcon";
 import {
-  DataHome,
-  DataAbout,
-  PageComponents,
-  PageComponentsAccordion,
-  PageComponentsAlert,
-  PageComponentsAudio,
-  PageComponentsBadge,
-  PageComponentsButton,
-  PageComponentsCard,
-  DataContact,
-  PageComponentsVideo,
-} from "./pages";
+  HomeView,
+  AboutView,
+  ComponentsView,
+  ComponentsAccordionView,
+  ComponentsAlertView,
+  ComponentsAudioView,
+  ComponentsBadgeView,
+  ComponentsButtonView,
+  ComponentsCardView,
+  ComponentsVideoView,
+  ContactView,
+} from "./views";
 
 export const PagesData = [
   {
@@ -19,13 +19,13 @@ export const PagesData = [
     url: "/",
     title: "Home",
     hideNav: true,
-    content: DataHome,
+    content: HomeView,
   },
   {
     id: "2",
     url: "/components",
     title: "Components",
-    content: PageComponents,
+    content: ComponentsView,
   },
   {
     id: "2-1",
@@ -33,7 +33,7 @@ export const PagesData = [
     title: "Accordion",
     hideNav: true,
     theme: "pink",
-    content: PageComponentsAccordion,
+    content: ComponentsAccordionView,
   },
   {
     id: "2-2",
@@ -41,7 +41,7 @@ export const PagesData = [
     title: "Alert",
     hideNav: true,
     theme: "blue",
-    content: PageComponentsAlert,
+    content: ComponentsAlertView,
   },
   {
     id: "2-3",
@@ -49,7 +49,7 @@ export const PagesData = [
     title: "Audio",
     hideNav: true,
     theme: "green",
-    content: PageComponentsAudio,
+    content: ComponentsAudioView,
   },
   {
     id: "2-4",
@@ -57,7 +57,7 @@ export const PagesData = [
     title: "Badge",
     hideNav: true,
     theme: "purple",
-    content: PageComponentsBadge,
+    content: ComponentsBadgeView,
   },
   {
     id: "2-5",
@@ -65,7 +65,7 @@ export const PagesData = [
     title: "Button",
     hideNav: true,
     theme: "red",
-    content: PageComponentsButton,
+    content: ComponentsButtonView,
   },
   {
     id: "2-6",
@@ -73,7 +73,7 @@ export const PagesData = [
     title: "Card",
     hideNav: true,
     theme: "orange",
-    content: PageComponentsCard,
+    content: ComponentsCardView,
   },
   {
     id: "2-7",
@@ -81,18 +81,18 @@ export const PagesData = [
     title: "Video",
     hideNav: true,
     theme: "orange",
-    content: PageComponentsVideo,
+    content: ComponentsVideoView,
   },
   {
     id: "3",
     url: "/about",
     title: "About",
-    content: DataAbout,
+    content: AboutView,
   },
   {
     id: "4",
     url: "/contact",
     title: "Contact",
-    content: DataContact,
+    content: ContactView,
   },
 ];

@@ -216,9 +216,10 @@ export const VideoPlayer = observer((props: VideoPlayerProps) => {
       id="videoHolder"
       className={`media-player video-player ${state.enableFullscreen ? "fullscreen" : ""}`}
     >
-      <div className="embed-responsive embed-responsive-16by9">
+      <div className="ratio ratio-16x9">
         <video
           src={props.src}
+          className="media-player-video"
           ref={videoRef}
           loop={props.loop}
           muted={props.muted}
@@ -238,12 +239,16 @@ export const VideoPlayer = observer((props: VideoPlayerProps) => {
       </div>
       <cpx.Scrubber currentPercent={currentPercent} onEndScrub={resumeAt} onStartScrub={pause} />
       <div className={`media-player-controls bg-${props.color}`}>
-        {playPauseButton}
-        {timeDisplay}
-        {props.captions && captionsButton}
-        {audioButton}
-        {props.allowFullscreen && fullscreenButton}
-        {props.captions && transcriptButton}
+        <bs.ButtonGroup>
+          {playPauseButton}
+          {timeDisplay}
+        </bs.ButtonGroup>
+        <bs.ButtonGroup>
+          {props.captions && captionsButton}
+          {audioButton}
+          {props.allowFullscreen && fullscreenButton}
+          {props.captions && transcriptButton}
+        </bs.ButtonGroup>
       </div>
     </div>
   );

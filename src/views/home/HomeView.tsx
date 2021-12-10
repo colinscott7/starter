@@ -1,9 +1,9 @@
 import * as bs from "reactstrap";
-import * as cpx from "../components";
-import * as hook from "../hooks";
+import * as cpx from "../../components";
+import * as hook from "../../hooks";
 import { RouteComponentProps } from "react-router-dom";
 
-export const DataHome = (props: RouteComponentProps) => {
+export const HomeView = (props: RouteComponentProps) => {
   const navigateToPath = (id: string) => (evt: any) => {
     evt.preventDefault();
     evt.stopPropagation();
@@ -30,9 +30,10 @@ export const DataHome = (props: RouteComponentProps) => {
       <cpx.Layout>
         <bs.Row className="mt-3 mb-4">
           <bs.Col xl="12" className="text-center mx-auto">
-            <h2 className="display-1 text-light-rgba">Functional Components</h2>
-            <p className="lead text-light-rgba">
-              A list of development components that are fully functional.
+            <h1 className="display-1 text-dark">Get Started</h1>
+            <p className="lead text-dark">
+              This is a quick React/Typescript/Reacstrap/MobX starter app with some pre-made
+              components and styles.
             </p>
           </bs.Col>
         </bs.Row>
