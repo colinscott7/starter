@@ -1,0 +1,17 @@
+@import "components/media-player";
+
+//////////////////////////////////////////////////
+// MOBILE STUFF
+//////////////////////////////////////////////////
+// mobile
+@media (min-width: map-get($grid-breakpoints, "sm")) {
+}
+// tablet
+@media (min-width: map-get($grid-breakpoints, "md")) {
+}
+// large tablet / small desktop
+@media (min-width: map-get($grid-breakpoints, "lg")) {
+}
+// desktop
+@media (min-width: map-get($grid-breakpoints, "xl")) {
+}

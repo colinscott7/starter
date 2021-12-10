@@ -1,0 +1,101 @@
+.media-player {
+  position: relative;
+  .media-player-controls {
+    display: flex;
+    align-items: center;
+  }
+  .media-player-time {
+    font-size: 0.9rem;
+  }
+  .media-player-captions {
+    padding: 1rem;
+    text-align: center;
+    font-family: $font-family-sans-serif;
+  }
+  .media-player-scrubber {
+    min-width: 50%;
+  }
+  .media-player-scrubber-range {
+    height: 9px;
+  }
+  .media-player-scrubber-progress {
+    height: 100%;
+    background-color: $secondary;
+  }
+  .media-player-transcript {
+    .card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      border-radius: 0;
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem 0 0;
+    }
+    .card-body {
+      flex-grow: 1;
+      overflow: auto;
+      padding: 0;
+      .list-group-item {
+        padding: 0;
+        width: 100%;
+        .btn {
+          width: 100%;
+          font-size: 0.77rem;
+          text-align: left;
+          border-radius: 0;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+        }
+      }
+    }
+  }
+  video {
+    background-color: $black;
+  }
+  &.fullscreen {
+    .media-player-controls {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+    .embed-responsive {
+      height: 100%;
+    }
+  }
+}
+.video-player {
+  .media-player-subtitles {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 40%, rgba(255, 255, 255, 0) 100%);
+  }
+  .media-player-captions {
+    color: $white;
+    text-shadow: 2px 2px $black;
+  }
+  .media-player-transcript {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+.audio-player {
+  .media-player-transcript {
+    .card-body {
+      max-height: 400px;
+    }
+  }
+}
