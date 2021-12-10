@@ -19,6 +19,11 @@
 
 // 4. Import custom styles
 @import "media-player.scss";
+@import "../components/accordion/accordion.scss";
+@import "../components/breadcrumb/breadcrumb.scss";
 @import "../components/navbar/navbar.scss";
 @import "../components/audioplayer/audio-player.scss";
 @import "../components/videoplayer/video-player.scss";
+@import "../components/scrubber/scrubber.scss";
+@import "../components/transcript/transcript.scss";
+@import "../components/vtt/captions.scss";

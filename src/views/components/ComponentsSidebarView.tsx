@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import * as bs from "reactstrap";
-import * as cpx from "../components";
-import * as hook from "../hooks";
+import * as cpx from "../../components";
+import * as hook from "../../hooks";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
 
-export const ServicesSidebar = () => {
+export const ComponentsSidebarView = () => {
   const [menuVisible, setMenuVisible] = useState(false);
   const [menuClasses, setMenuClasses] = useState("");
 
@@ -22,13 +22,13 @@ export const ServicesSidebar = () => {
 
   const getServicesPages = hook.getServicesList();
   const pathname = window.location.pathname;
-  const servicesSidebarItems = getServicesPages.map((page, index) => {
+  const servicesSidebarItems = getServicesPages?.map((page, index) => {
     const itemClasses = classNames({
       active: pathname === page.url,
     });
 
     return (
-      <bs.Col sm="12">
+      <bs.Col sm="12" key={`sidebaritem___${index}`}>
         <Link to={page.url} className="card-link">
           <bs.Card className={`card-tile mb-2 view-list icon-${page.theme} ${itemClasses}`}>
             <bs.CardBody>

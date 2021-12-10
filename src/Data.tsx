@@ -7,8 +7,10 @@ import {
   ComponentsAlertView,
   ComponentsAudioView,
   ComponentsBadgeView,
+  ComponentsBreadcrumbView,
   ComponentsButtonView,
   ComponentsCardView,
+  ComponentsTabsView,
   ComponentsVideoView,
   ContactView,
 } from "./views";
@@ -61,6 +63,14 @@ export const PagesData = [
   },
   {
     id: "2-5",
+    url: "/components/breadcrumb",
+    title: "Breadcrumb",
+    hideNav: true,
+    theme: "purple",
+    content: ComponentsBreadcrumbView,
+  },
+  {
+    id: "2-6",
     url: "/components/button",
     title: "Button",
     hideNav: true,
@@ -68,7 +78,7 @@ export const PagesData = [
     content: ComponentsButtonView,
   },
   {
-    id: "2-6",
+    id: "2-7",
     url: "/components/card",
     title: "Card",
     hideNav: true,
@@ -76,7 +86,15 @@ export const PagesData = [
     content: ComponentsCardView,
   },
   {
-    id: "2-7",
+    id: "2-8",
+    url: "/components/tabs",
+    title: "Tabs",
+    hideNav: true,
+    theme: "orange",
+    content: ComponentsTabsView,
+  },
+  {
+    id: "2-9",
     url: "/components/video",
     title: "Video",
     hideNav: true,

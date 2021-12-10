@@ -27,18 +27,18 @@ export const Transcript = (props: TranscriptProps) => {
         <bs.CardBody>
           <ul className="list-group list-group-flush">
             {props.vttFile &&
-              props.vttFile.Cues.map((cuePoint: any, idx: number) => {
+              props.vttFile.Cues.map((cuePoint: any, index: number) => {
                 return (
                   <>
-                    <li className="list-group-item">
+                    <li className="list-group-item" key={`cues___${index}`}>
                       <bs.Button
                         color={props.color}
                         tabIndex={0}
                         onClick={handleCueClick(cuePoint.Start)}
-                        aria-labelledby={`timestamp_${idx}`}
+                        aria-labelledby={`timestamp_${index}`}
                       >
                         <span className="mr-2">{hook.formatMediaTime(cuePoint.Start / 1000)}</span>
-                        <span id={`timestamp_${idx}`}>{cuePoint.match.text}</span>
+                        <span id={`timestamp_${index}`}>{cuePoint.match.text}</span>
                       </bs.Button>
                     </li>
                   </>

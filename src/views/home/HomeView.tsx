@@ -10,9 +10,9 @@ export const HomeView = (props: RouteComponentProps) => {
     props.history.push(id);
   };
 
-  const homePageList = hook.getServicesList().map((item, index) => {
+  const homePageList = hook.getServicesList()?.map((item, index) => {
     return (
-      <bs.Col lg="4">
+      <bs.Col lg="4" key={`homepageitem___${index}`}>
         <bs.Card className={`card-tile icon-${item.theme}`} onClick={navigateToPath(`${item.url}`)}>
           <bs.CardBody>
             <div>

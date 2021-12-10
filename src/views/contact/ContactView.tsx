@@ -8,14 +8,6 @@ export const ContactView = () => {
       <cpx.Layout>
         <bs.Row className="justify-content-between align-items-center">
           <bs.Col>
-            <bs.Breadcrumb className="breadcrumb-wrapper">
-              <bs.BreadcrumbItem>
-                <Link to="/">Home</Link>
-              </bs.BreadcrumbItem>
-              <bs.BreadcrumbItem active>Contact</bs.BreadcrumbItem>
-            </bs.Breadcrumb>
-          </bs.Col>
-          <bs.Col>
             <h1 className="display-2 text-right text-secondary">Contact</h1>
           </bs.Col>
         </bs.Row>

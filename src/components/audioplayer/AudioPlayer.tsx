@@ -151,10 +151,14 @@ export const AudioPlayer = observer((props: AudioPlayerProps) => {
       )}
       <cpx.Scrubber currentPercent={currentPercent} onEndScrub={resumeAt} onStartScrub={pause} />
       <div className={`media-player-controls bg-${props.color}`}>
-        {playPauseButton}
-        {timeDisplay}
-        {captionsButton}
-        {transcriptButton}
+        <bs.ButtonGroup>
+          {playPauseButton}
+          {timeDisplay}
+        </bs.ButtonGroup>
+        <bs.ButtonGroup>
+          {captionsButton}
+          {transcriptButton}
+        </bs.ButtonGroup>
       </div>
       {state.enableTranscript && (
         <div className="media-player-transcript">

@@ -3,9 +3,10 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 import * as bs from "reactstrap";
 import * as cpx from "../../components";
 import { useHistory } from "react-router-dom";
-import { PagesData } from "../../Data";
+import { NavbarProps } from "../../interfaces/NavbarProps";
+import { PagesDataProps } from "../../interfaces/PagesDataProps";
 
-export const Navbar = () => {
+export const Navbar = (props: NavbarProps) => {
   const [menuVisible, setMenuVisible] = React.useState(false);
   const [menuClasses, setMenuClasses] = React.useState("");
   const history = useHistory();
@@ -24,25 +25,27 @@ export const Navbar = () => {
   };
 
   // Snippets
-  const navList = PagesData.filter((item) => item.hideNav !== true).map((item, index) => {
-    const navigateToPath = (url: string) => (evt: any) => {
-      evt.preventDefault();
-      evt.stopPropagation();
-      history.push(url);
-      setMenuVisible(false);
-      setMenuClasses("");
-    };
-    return (
-      <li className="nav-item" key={index}>
-        <bs.Button onClick={navigateToPath(item.url)} className="nav-link">
-          {item.title}
-        </bs.Button>
-      </li>
-    );
-  });
+  const navList = props.data
+    .filter((item: PagesDataProps) => item.hideNav !== true)
+    .map((item: PagesDataProps, index: number) => {
+      const navigateToPath = (url: string) => (evt: any) => {
+        evt.preventDefault();
+        evt.stopPropagation();
+        history.push(url);
+        setMenuVisible(false);
+        setMenuClasses("");
+      };
+      return (
+        <li className="nav-item" key={`navitem___${index}`}>
+          <bs.Button color="link" onClick={navigateToPath(item.url)} className="nav-link">
+            {item.title}
+          </bs.Button>
+        </li>
+      );
+    });
 
   return (
-    <bs.Navbar color="dark">
+    <bs.Navbar color={props.theme}>
       <bs.Container>
         <Link className="navbar-brand" to="/">
           <img alt="" className="navbar-img" src="/logo192.png" />
