@@ -19,7 +19,8 @@
 
 // 4. Import custom styles
 @import "media-player.scss";
-@import "../components/accordion/accordion.scss";
+@import "tabs.scss";
+// @import "../components/accordion/accordion.scss";
 @import "../components/breadcrumb/breadcrumb.scss";
 @import "../components/navbar/navbar.scss";
 @import "../components/audioplayer/audio-player.scss";
